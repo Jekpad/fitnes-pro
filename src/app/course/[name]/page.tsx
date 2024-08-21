@@ -1,5 +1,5 @@
 function CourseName() {
-  return <>Страница курса Серёга!</>;
+  return <>Страница курса Серёга! ываыва</>;
 }
 
 export default CourseName;
