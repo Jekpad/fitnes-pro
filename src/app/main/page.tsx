@@ -1,5 +1,11 @@
+import Card from "../components/Card/Card";
 function Main() {
-  return <>Главная</>;
+  return (
+    <>
+      Главная
+      <Card />
+    </>
+  );
 }
 
 export default Main;
