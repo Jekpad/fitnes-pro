@@ -1,7 +1,12 @@
-function CourseName() {
+import { Link } from "react-router-dom";
+import Header from "../../components/Header/Header";
+
+export default function CoursePage() {
   return (
     <>
-      Страница курса Серёга
+      <Header />
+      {/* <Link to={`/login`}>
+      </Link> */}
       <div className="mx-[140px] my-[60px]">
         <div className="">
           <div className="flex h-[310px] w-[1160px] flex-row justify-between rounded-[20px] bg-[#ffc700]">
@@ -204,9 +209,11 @@ function CourseName() {
                       </div>
                     </div>
                     <div className="cursor-pointer pl-[28px]">
-                      <div className="btn-green h-[52px] w-[437px] px-4 py-2 text-center text-2xl font-semibold">
-                        Войдите, чтобы добавить курс
-                      </div>
+                      <Link to={`/login`}>
+                        <div className="btn-green h-[52px] w-[437px] px-4 py-2 text-center text-2xl font-semibold">
+                          Войдите, чтобы добавить курс
+                        </div>
+                      </Link>
                     </div>
                   </div>
                   <div>
@@ -239,5 +246,3 @@ function CourseName() {
     </>
   );
 }
-
-export default CourseName;
