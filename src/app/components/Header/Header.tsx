@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <>
       <div className="flex flex-row">
-        <div className="mt-[50px]">
+        <div>
           <Image
             className=""
             src="/logo.png"
@@ -12,11 +12,11 @@ export default function Header() {
             width="220"
             height="35"
           />
-          <p className="mt-[15px] w-[327px] text-lg text-[#7d7d7d]">
+          <p className="mt-[15px] text-wrap text-lg text-[#7d7d7d]">
             Онлайн-тренировки для занятий дома
           </p>
         </div>
-        <div className="ml-auto mt-[50px]">
+        <div className="ml-auto">
           <div className="btn-green h-[52px] w-[103px] px-4 py-2 text-center text-2xl font-semibold">
             Войти
           </div>

@@ -8,7 +8,7 @@ type Props = {
 
 const PopUpProgress = ({ setIsPopUpDisplay, exercises }: Props) => {
   return (
-    <div className="fixed left-0 right-0 top-0 z-50 flex max-h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden bg-black bg-opacity-20 md:inset-0">
+    <div className="fixed bottom-0 left-0 right-0 top-0 z-50 flex max-h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden bg-black bg-opacity-20 md:inset-0">
       <div className="relative box-content max-h-[516px] max-w-[346px] rounded-[30px] bg-color-component-background p-10 shadow-lg">
         <h3 className="w-full text-[32px] leading-[32px]">Мой прогресс</h3>
         <div className="custom-scroll mt-12 flex max-h-[346px] flex-col gap-5 overflow-y-auto pr-7">

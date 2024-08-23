@@ -25,30 +25,29 @@ function WorkoutNameId() {
   return (
     <ContentWrapper>
       <Header />
-      <h1 className="mt-[60px] text-[60px] font-medium leading-[60px]">
+      <h1 className="mt-10 text-2xl font-medium md:mt-[60px] md:text-[60px] md:leading-[60px]">
         {workoutName}
       </h1>
-      <ul className="mt-6 flex flex-row gap-2">
+      <ul className="mt-[10px] flex flex-row flex-wrap gap-2 md:mt-6">
         {breadcrumbs.map((breadcrumb, i) => (
           <li
             key={i}
-            className="cursor-pointer text-[32px] underline after:cursor-default after:ps-2 after:no-underline after:content-['/'] last:after:content-[]"
+            className="cursor-pointer text-lg underline after:cursor-default after:ps-2 after:no-underline after:content-['/'] last:after:content-[] md:text-[32px]"
           >
             {breadcrumb}
           </li>
         ))}
       </ul>
       <iframe
-        className="mt-10 h-[639px] w-full rounded-[30px]"
-        width="720"
-        height="405"
+        className="mt-6 aspect-video w-full rounded-[30px] md:mt-10"
         src="https://rutube.ru/play/embed/b257aa9771b72bb2e14e1a3e15be4137/"
         frameBorder="0"
         allow="clipboard-write; autoplay"
       ></iframe>
-      <section className="mt-10 rounded-[30px] bg-color-component-background p-10 shadow-sm">
+
+      <section className="mt-6 rounded-[30px] bg-color-component-background p-[30px] shadow-sm md:mt-10 md:p-10">
         <h2 className="text-[32px] leading-[32px]">{exercisesText}</h2>
-        <div className="mt-5 grid grid-cols-3 gap-[60px]">
+        <div className="mt-5 grid gap-6 md:grid-cols-3 md:gap-[60px]">
           {exercises.map((exercisesBlock, index) => (
             <div key={index} className="flex flex-col gap-5">
               {exercisesBlock.map((exercise, i) => (
@@ -62,7 +61,7 @@ function WorkoutNameId() {
           ))}
         </div>
         <button
-          className="mt-10 rounded-[46px] bg-color-acсent px-6 py-4 text-xl font-normal hover:bg-color-acent-hover"
+          className="mt-10 w-full rounded-[46px] bg-color-acсent px-6 py-4 text-lg font-normal hover:bg-color-acent-hover md:w-auto md:text-xl"
           onClick={showPopUp}
         >
           Заполнить свой прогресс
