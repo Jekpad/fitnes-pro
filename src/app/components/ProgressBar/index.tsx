@@ -1,7 +1,3 @@
-"use client";
-
-import classNames from "classnames";
-
 type Props = {
   text: string;
   progress: number;

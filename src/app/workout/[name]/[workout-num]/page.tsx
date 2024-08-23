@@ -1,8 +1,14 @@
+"use client";
+
 import ContentWrapper from "@/app/components/ContentWrapper";
 import Header from "@/app/components/Header/Header";
+import PopUpProgress from "@/app/components/PopUp/PopUpProgress";
 import ProgressBar from "@/app/components/ProgressBar";
+import { useState } from "react";
 
 function WorkoutNameId() {
+  const [isPopUpDisplay, setIsPopUpDisplay] = useState<boolean>(false);
+
   const workoutName = "Йога";
   const breadcrumbs = ["Красота и здоровье", "Йога на каждый день", "2 день"];
   const exercisesText = "Упражнения тренировки 2";
@@ -12,10 +18,16 @@ function WorkoutNameId() {
     ["Наклоны вперед ", "Наклоны назад ", "Поднятие ног, согнутых в коленях"],
   ];
 
+  const showPopUp = () => {
+    setIsPopUpDisplay(true);
+  };
+
   return (
     <ContentWrapper>
       <Header />
-      <h1 className="text-[60px] font-medium leading-[60px]">{workoutName}</h1>
+      <h1 className="mt-[60px] text-[60px] font-medium leading-[60px]">
+        {workoutName}
+      </h1>
       <ul className="mt-6 flex flex-row gap-2">
         {breadcrumbs.map((breadcrumb, i) => (
           <li
@@ -49,10 +61,20 @@ function WorkoutNameId() {
             </div>
           ))}
         </div>
-        <button className="mt-10 rounded-[46px] bg-color-acсent px-6 py-4 text-xl font-normal hover:bg-color-acent-hover">
+        <button
+          className="mt-10 rounded-[46px] bg-color-acсent px-6 py-4 text-xl font-normal hover:bg-color-acent-hover"
+          onClick={showPopUp}
+        >
           Заполнить свой прогресс
         </button>
       </section>
+
+      {isPopUpDisplay && (
+        <PopUpProgress
+          setIsPopUpDisplay={setIsPopUpDisplay}
+          exercises={exercises}
+        />
+      )}
     </ContentWrapper>
   );
 }
