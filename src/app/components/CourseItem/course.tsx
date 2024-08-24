@@ -21,11 +21,11 @@ const CourseItem: React.FC<CourseItemProps> = ({ course, status }) => {
       <div className="text-[24px]">{course.name}</div>
       <div className="flex">
         <p className="bg-[#f7f7f7] p-1 rounded-2xl w-[90px] text-center mr-[6px] flex items-center h-[38px] justify-around">
-          <img src="/images/time.svg" alt="Time Icon" />
+          <img src="/time.svg" alt="Time Icon" />
           {course.length} дней
         </p>
         <p className="bg-[#f7f7f7] p-1 rounded-2xl w-[163px] text-center flex items-center h-[38px] justify-around">
-          <img src="/images/work.svg" alt="Work Icon" />
+          <img src="/work.svg" alt="Work Icon" />
           {course.time}
         </p>
       </div>

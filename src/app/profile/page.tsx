@@ -1,4 +1,5 @@
-import CourseItem from "./course";
+import CourseItem from "../components/CourseItem/course";
+import Header from "../components/Header/Header";
 
 function Profile() {
   const courses = [
@@ -18,8 +19,9 @@ function Profile() {
 
   return (
     <>
-      <div className="flex flex-col items-center bg-[#fafafa] w-full h-[1559px]">
-        <div className="w-5/6 mt-[145px]">
+    <Header />
+      <div className="flex flex-col items-center bg-[#fafafa] w-full h-[100%]">
+        <div className="w-5/6 mt-[50px]">
           <p className="text-[40px] text-start">Профиль</p>
         </div>
         <div className="flex p-10 shadow-lg w-5/6 bg-white rounded-2xl mt-4">
