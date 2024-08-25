@@ -23,7 +23,7 @@ const ModalSelect: React.FC<ModalSelectProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center">
+    <div className="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center" onClick={onClose}>
       <div className="bg-white p-6 rounded-3xl shadow-lg h-[500px] w-[400px] flex flex-col justify-around">
         <p className="text-lg font-medium text-center">Выберите тренировку</p>
         <div>

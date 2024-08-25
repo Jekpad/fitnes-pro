@@ -20,7 +20,7 @@ function Profile() {
     }
   }
 
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleOpenModal = () => setIsModalOpen(true);
   const handleCloseModal = () => setIsModalOpen(false);
@@ -57,7 +57,9 @@ function Profile() {
           <h2 className="text-[32px] mb-4">Мои курсы</h2>
           <div className="flex justify-between">
             {courses.map((course, index) => (
-              <CourseItem key={index} course={course} status={status(course.progress)}/>
+              <div onClick={handleOpenModal}>
+                <CourseItem key={index} course={course} status={status(course.progress)}/>
+              </div>
             ))}
           </div>
         </div>
