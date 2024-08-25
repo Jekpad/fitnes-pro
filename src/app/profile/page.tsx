@@ -1,5 +1,8 @@
+"use client"
+import { useState } from "react";
 import CourseItem from "../components/CourseItem/course";
 import Header from "../components/Header/Header";
+import ModalSelect from "../components/ModalSelect/ModalSelect";
 
 function Profile() {
   const courses = [
@@ -16,6 +19,12 @@ function Profile() {
       return 'Начать тренировки'
     }
   }
+
+  const [isModalOpen, setIsModalOpen] = useState(true);
+
+  const handleOpenModal = () => setIsModalOpen(true);
+  const handleCloseModal = () => setIsModalOpen(false);
+
 
   return (
     <>
@@ -53,6 +62,7 @@ function Profile() {
           </div>
         </div>
       </div>
+      <ModalSelect isOpen={isModalOpen} onClose={handleCloseModal} />
     </>
   );
 }
