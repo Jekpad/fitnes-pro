@@ -54,14 +54,14 @@ function Profile() {
           </div>
         </div>
         <div className="w-5/6 mt-8">
-          <h2 className="text-[32px] mb-4">Мои курсы</h2>
-          <div className="flex justify-between">
-            {courses.map((course, index) => (
-              <div onClick={handleOpenModal}>
-                <CourseItem key={index} course={course} status={status(course.progress)}/>
-              </div>
-            ))}
-          </div>
+            <h2 className="text-[32px] mb-4">Мои курсы</h2>
+            <div className="flex flex-wrap justify-between">
+              {courses.map((course, index) => (
+                <div key={index} onClick={handleOpenModal} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 p-2 ">
+                  <CourseItem course={course} status={status(course.progress)} />
+                </div>
+              ))}
+            </div>
         </div>
       </div>
       <ModalSelect isOpen={isModalOpen} onClose={handleCloseModal} />
