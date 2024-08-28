@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 function CourseName() {
   return (
     <>
@@ -8,12 +10,12 @@ function CourseName() {
             <div className="ml-10 mt-10">
               <p className="leading-16 text-6xl font-medium text-white">Йога</p>
             </div>
-            <img
+            <Image
               className="rounded-lg"
               src="/yoga.png"
               alt="course_picture"
-              width="1023px"
-              height="310px"
+              width="1023"
+              height="310"
             />
           </div>
           <div className="gap-x-[3.75rem] pt-[60px]">
@@ -185,7 +187,7 @@ function CourseName() {
                 </div>
               </div>
             </div>
-            <div className="">
+            <div>
               <div className="overflow-hidden">
                 <div className="mt-[102px] flex h-[486px] w-[1160px] flex-row rounded-[20px] bg-[#FFFFFF] shadow-2xl">
                   <div>
@@ -210,24 +212,27 @@ function CourseName() {
                     </div>
                   </div>
                   <div>
-                    <img
+                    <Image
                       className="relative rotate-[355deg] pt-[100px]"
+                      alt=""
                       src="/green_line.png"
-                      width="670.18px"
-                      height="390.98px"
+                      width="670"
+                      height="390"
                     />
 
-                    <img
+                    <Image
                       className="relative left-[+150px] top-[-655px] z-[1] rotate-[357deg]"
+                      alt=""
                       src="/running_man.png"
-                      width="519.47px"
-                      height="539.54px"
+                      width="519"
+                      height="539"
                     />
-                    <img
+                    <Image
                       className="relative left-[+250px] top-[-1110px] z-[2]"
+                      alt=""
                       src="/black_line.png"
-                      width="50px"
-                      height="42.5px"
+                      width="50"
+                      height="42"
                     />
                   </div>
                 </div>
