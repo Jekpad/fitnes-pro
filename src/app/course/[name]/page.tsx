@@ -1,10 +1,12 @@
+import ContentWrapper from "@/app/components/ContentWrapper";
+import Header from "@/app/components/Header/Header";
 import Image from "next/image";
 
 function CourseName() {
   return (
-    <>
-      Страница курса Серёга
-      <div className="mx-[140px] my-[60px]">
+    <ContentWrapper>
+      <Header />
+      <div className="my-[60px]">
         <div className="">
           <div className="flex h-[310px] w-[1160px] flex-row justify-between rounded-[20px] bg-[#ffc700]">
             <div className="ml-10 mt-10">
@@ -241,7 +243,7 @@ function CourseName() {
           </div>
         </div>
       </div>
-    </>
+    </ContentWrapper>
   );
 }
 

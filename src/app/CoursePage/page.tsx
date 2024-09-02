@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
-import Header from "../../components/Header/Header";
+import ContentWrapper from "../components/ContentWrapper";
+import Header from "../components/Header/Header";
 
 export default function CoursePage() {
   return (
-    <>
+    <ContentWrapper>
       <Header />
       {/* <Link to={`/login`}>
       </Link> */}
@@ -209,11 +209,11 @@ export default function CoursePage() {
                       </div>
                     </div>
                     <div className="cursor-pointer pl-[28px]">
-                      <Link to={`/login`}>
+                      <a href="/login">
                         <div className="btn-green h-[52px] w-[437px] px-4 py-2 text-center text-2xl font-semibold">
                           Войдите, чтобы добавить курс
                         </div>
-                      </Link>
+                      </a>
                     </div>
                   </div>
                   <div>
@@ -243,6 +243,6 @@ export default function CoursePage() {
           </div>
         </div>
       </div>
-    </>
+    </ContentWrapper>
   );
 }
